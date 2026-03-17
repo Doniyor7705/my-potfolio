@@ -38,11 +38,11 @@ export default function Home() {
 
   return (
     <main className="bg-[#050505] text-gray-100 font-sans selection:bg-purple-500/30 overflow-x-hidden">
-      
+
       {/* 1. HERO SECTION - Telefonda markazlashgan, kompyuterda keng */}
       <section className="relative min-h-[90vh] md:min-h-screen flex flex-col items-center justify-center text-center px-4 py-20 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent -z-10" />
-        
+
         <div className="relative mb-8 animate-in fade-in zoom-in duration-1000">
           <img
             src="/men.jpg"
@@ -59,7 +59,7 @@ export default function Home() {
         </h1>
 
         <p className="text-gray-400 max-w-sm sm:max-w-xl text-base sm:text-lg md:text-xl mb-10 leading-relaxed px-4">
-          SMM va Target bo'yicha professional strateg. <br className="hidden sm:block"/>
+          SMM va Target bo'yicha professional strateg. <br className="hidden sm:block" />
           Biznesingizni raqamli dunyoda yetakchiga aylantiraman.
         </p>
 
@@ -80,7 +80,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-5xl font-bold mb-4">Xizmatlarim</h2>
             <div className="h-1.5 w-20 bg-purple-600 mx-auto md:mx-0 rounded-full" />
           </div>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
               { title: 'Instagram SMM', icon: <MessageSquare />, desc: 'Vizual estetika va faol auditoriya bilan ishlash strategiyasi.' },
@@ -131,9 +131,9 @@ export default function Home() {
                 <h3 className="text-2xl md:text-3xl font-bold mb-4">{project.name}</h3>
                 <p className="text-gray-400 text-base md:text-xl mb-10 leading-relaxed">{project.desc}</p>
               </div>
-              <a 
-                href={project.link} 
-                target="_blank" 
+              <a
+                href={project.link}
+                target="_blank"
                 className="inline-flex items-center gap-2 text-purple-400 font-black hover:text-purple-300 transition-all text-sm md:text-base"
               >
                 KEYSNI KO'RISH <ExternalLink size={18} />
@@ -150,7 +150,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Bog'lanish</h2>
             <p className="text-gray-500">Sizning biznesingiz — mening mas'uliyatim</p>
           </div>
-          
+
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input name="Ism" placeholder="Ism" required className="w-full bg-black/40 border border-white/10 p-5 rounded-2xl focus:border-purple-500 outline-none transition-all placeholder:text-gray-600" />
@@ -158,13 +158,13 @@ export default function Home() {
             </div>
             <input name="Telefon" placeholder="Telefon (masalan: +998...)" required className="w-full bg-black/40 border border-white/10 p-5 rounded-2xl focus:border-purple-500 outline-none transition-all placeholder:text-gray-600" />
             <textarea name="Xabar" placeholder="Loyiha haqida..." rows={4} required className="w-full bg-black/40 border border-white/10 p-5 rounded-2xl focus:border-purple-500 outline-none transition-all placeholder:text-gray-600" />
-            
-            <button 
-              type="submit" 
+
+            <button
+              type="submit"
               disabled={loading}
               className="w-full bg-white text-black p-5 rounded-2xl font-black text-lg hover:bg-gray-200 active:scale-95 transition-all disabled:opacity-50 flex items-center justify-center gap-2"
             >
-              {loading ? "Yuborilmoqda..." : <>YUBORISH <ChevronRight size={20}/></>}
+              {loading ? "Yuborilmoqda..." : <>YUBORISH <ChevronRight size={20} /></>}
             </button>
           </form>
         </div>
@@ -175,9 +175,9 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="flex flex-wrap justify-center gap-8 md:gap-20 mb-16">
             {[
-              { icon: <Instagram size={32}/>, link: 'https://instagram.com/usarov_doniyor3', label: 'Instagram', color: 'hover:text-pink-500' },
-              { icon: <Send size={32}/>, link: 'https://t.me/DoniCoder', label: 'Telegram', color: 'hover:text-blue-500' },
-              { icon: <Phone size={32}/>, link: 'tel:+99890904456233', label: 'Qo\'ng\'iroq', color: 'hover:text-green-500' }
+              { icon: <Instagram size={32} />, link: 'https://instagram.com/usarov_doniyor3', label: 'Instagram', color: 'hover:text-pink-500' },
+              { icon: <Send size={32} />, link: 'https://t.me/DoniCoder', label: 'Telegram', color: 'hover:text-blue-500' },
+              { icon: <Phone size={32} />, link: 'tel:+998904456233', label: 'Qo\'ng\'iroq', color: 'hover:text-green-500' }
             ].map((social, i) => (
               <a key={i} href={social.link} target="_blank" className={`group flex flex-col items-center gap-3 transition-all ${social.color}`}>
                 <div className="p-4 rounded-[1.5rem] bg-white/5 group-hover:bg-current group-hover:bg-opacity-10 transition-all">
